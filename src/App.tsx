@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from "react";
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function App () {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <button className="center-button" onClick={openModal}>
+        Расчёт платежей
+      </button>
+
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+          <h2> Платеж по кредиту</h2>
+          <p>Введите сумму кредита и выберете срок, на который вы хотите его оформить.</p>
+          <p>Мы автоматически рассчитаем для вас ежемесячный платеж, чтобы вы могли лучше спланировать свои финансы.</p>
+          <input></input>
+          <button></button>
+          <button onClick={closeModal}>Закрыть</button>
+          </div>
+        </div> 
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
