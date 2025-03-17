@@ -1,49 +1,37 @@
-.App {
-  background-color: red;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.body{
+  font-family: 'LabGrotesque';
+  margin: 0 !important;
 }
 
-.center-button {
-padding: 15px 30px;
-font-size: 18px;
-cursor: pointer;
-background-color: red;
-border: white;
-border-radius: 5px;
-color: red;
-font-weight: bold;
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url('./fonts/LabGrotesque-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url('./font/LabGrotesque-Medium.woff2') format('woff2');
+  font-weight: medium;
+  font-style: normal;
 }
 
-.modal {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url('./fonts/LabGrotesque-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
 }
 
-.modal button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 5px;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
 }
